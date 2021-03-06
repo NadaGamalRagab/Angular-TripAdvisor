@@ -15,7 +15,7 @@ import { HomeService } from 'src/app/_services/home/home.service';
 export class HotelsListingComponent implements OnInit, OnChanges {
   hotels = [];
   pageNumbers: number[] = [];
-  pageSize: number = 2;
+  pageSize: number = 7;
   currentPage: number = 0;
   spinner = true;
   hotelsId: string[] = [];
