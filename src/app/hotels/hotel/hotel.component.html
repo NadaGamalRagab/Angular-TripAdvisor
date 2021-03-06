@@ -17,7 +17,7 @@
         title="This is one of the most booked hotels in Hurghada over the last 60 days.">{{'Hotel.hotel.AllInclusive'|translate}}</span>
 
     </div>
-    <div id="myCarousel" class="carousel slide h-100 style-slider" data-ride="carousel">
+    <div id={{hotel._id}} class="carousel slide h-100 style-slider" data-ride="carousel">
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner h-100">
@@ -29,11 +29,11 @@
       </div>
 
       <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+      <a class="carousel-control-prev" href="#{{hotel._id}}" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
         <span class="sr-only">{{'Hotel.hotel.Previous'|translate}}</span>
       </a>
-      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+      <a class="carousel-control-next" href="#{{hotel._id}}" data-slide="next">
         <span class="carousel-control-next-icon"></span>
         <span class="sr-only">{{'Hotel.hotel.Next'|translate}}</span>
       </a>
@@ -100,7 +100,7 @@
           <div *ngIf="hotel.rating.length">
             <span class="dot" *ngFor='let dot of Counter(rate)'></span>
           </div>
-          <a data-toggle="modal" data-target="#exampleModal" (click)='HotelModal()'
+          <a data-toggle="modal" data-target="#exampleModal1" (click)='HotelModal()'
             class="text-dark pl-2 review">{{hotel.reviews.length}} {{'Hotel.hotel.reviews'|translate}} </a><br>
         </div>
         <app-hotel-modal [hotel]="hotel" *ngIf="showModal"></app-hotel-modal>

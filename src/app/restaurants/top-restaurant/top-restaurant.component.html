@@ -11,7 +11,7 @@
             d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
         </svg>
       </div>
-      <div id="myCarousel" class="carousel slide h-100 style-slider w-100" data-ride="carousel">
+      <div id={{resturant._id}} class="carousel slide h-100 style-slider w-100" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner h-100">
           <div *ngFor="let img of resturant.imageUrls;let i= index ;let isFirst=first" [ngClass]="{active:isFirst}"
@@ -20,11 +20,11 @@
           </div>
         </div>
         <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <a class="carousel-control-prev" href="#{{resturant._id}}" data-slide="prev">
           <span class="carousel-control-prev-icon"></span>
           <span class="sr-only">{{'Hotel.hotel.Previous'|translate}}</span>
         </a>
-        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+        <a class="carousel-control-next" href="#{{resturant._id}}" data-slide="next">
           <span class="carousel-control-next-icon"></span>
           <span class="sr-only">{{'Hotel.hotel.Next'|translate}}</span>
         </a>

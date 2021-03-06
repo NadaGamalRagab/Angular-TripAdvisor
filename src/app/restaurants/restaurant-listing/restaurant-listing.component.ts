@@ -19,7 +19,7 @@ export class RestaurantListingComponent implements OnInit {
   delivResturants;
   resturant = [];
   pageNumbers: number[] = [];
-  pageSize: number = 2;
+  pageSize: number = 7;
   currentPage: number = 0;
   spinner = true;
 

@@ -67,7 +67,7 @@ export class HotelCategoryService {
         Object.values(resp).map((res) => {
           //console.log(res);
           this.categoryList = res;
-          this.catEvent.emit();
+          //  this.catEvent.emit();
         });
         // this.categories = { ...resp };
         //console.log(this.categories);

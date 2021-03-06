@@ -152,9 +152,7 @@ export class HomeListingComponent implements OnInit {
           localStorage.setItem(
             'cruisesId',
             JSON.stringify(targetCity.cruisesId)
-          );
-        } else {
-          this.homeService.auth = false;
+          );         
         }
       }
       this.authCity = this.homeService.auth;
