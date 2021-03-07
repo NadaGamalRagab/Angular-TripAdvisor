@@ -15,7 +15,7 @@ import { HomeService } from 'src/app/_services/home/home.service';
 export class HotelsListingComponent implements OnInit, OnChanges {
   hotels = [];
   pageNumbers: number[] = [];
-  pageSize: number = 7;
+  pageSize: number = 5;
   currentPage: number = 0;
   spinner = true;
   hotelsId: string[] = [];
@@ -37,7 +37,7 @@ export class HotelsListingComponent implements OnInit, OnChanges {
         this.hotelService.getHotelById(id).subscribe((res) => {
           this.hotels.push(res);
           console.log(res);
-           this.calculateNumberOfPages(this.hotels.length);
+          this.calculateNumberOfPages(this.hotels.length);
         });
       }
     });
