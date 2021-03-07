@@ -37,6 +37,7 @@ export class HotelsListingComponent implements OnInit, OnChanges {
         this.hotelService.getHotelById(id).subscribe((res) => {
           this.hotels.push(res);
           console.log(res);
+           this.calculateNumberOfPages(this.hotels.length);
         });
       }
     });
